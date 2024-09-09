@@ -57,7 +57,7 @@
                 <%= icon_link_to "attachment-line", post_attachments_path(post), t("actions.attachments", scope: "decidim.meetings"), class: "action-icon--attachments" %>
               <% end %>
 
-              <% if allowed_to? :update, :blogpost, blog_post: post  %>
+              <% if allowed_to? :update, :blogpost, blog_post: post %>
                 <% if post.published? %>
                   <%= icon_link_to "close-circle-line", unpublish_post_path(post), t("actions.unpublish", scope: "decidim.admin"), method: :put, class: "action-icon--unpublish", data: { confirm: t("actions.unpublish", scope: "decidim.admin") } %>
                 <% else %>
